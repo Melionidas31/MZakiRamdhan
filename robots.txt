@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /MZakiRamdhan/concepts/
+Disallow: /MZakiRamdhan/tmp/
 
 Sitemap: https://melionidas31.github.io/MZakiRamdhan/sitemap.xml
