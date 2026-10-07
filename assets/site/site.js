@@ -2,22 +2,40 @@ const projects = window.portfolioProjects;
 const asset = path => (window.portfolioMedia || {})[path] || path;
 const pimg = (folder, names) => names.map(name => `assets/images/projects/${folder}/${name}`);
 
-// Current overrides on top of the authored records in project-data.js.
+// Current overrides on top of the authored records in project-data.js, aligned with the CV.
 Object.assign(projects['analisis-aja'], {
   title: 'AntiDeadline.ai',
-  role: 'AI application · designed and built end-to-end',
-  description: '<p>A workspace for analyzing problems, summarizing documents, and drafting reports. Formerly Analisis.Aja.</p><ul><li>Analysis with 5 Why, Fishbone, and RCA methods.</li><li>Structured summaries with key points and source references.</li><li>Built with Next.js, TypeScript, and LLM APIs, with auth, history, and credits.</li></ul>',
+  role: 'HSSE root cause analysis platform · closed beta · 2025 – present',
+  description: '<p>Turns HSSE and K3 documents into root cause analysis reports (5 Why, Fishbone, full RCA) that separate verified facts from assumptions, as drafts for authorised personnel to validate.</p><ul><li>Also summarizes documents and helps draft reports.</li><li>Built with Next.js, TypeScript, and LLM APIs, with auth, history, and credits.</li></ul>',
   images: pimg('antideadline-ai', ['01-landing.png', '03-dashboard.png', '04-analysis-input.png', '05-analysis-category.png', '06-analysis-methods.png', '07-summary-result.png'])
 });
 Object.assign(projects['n-hexane-hazard-zone'], {
-  role: 'Final-year thesis · process safety & ML',
-  description: '<p>Machine-learning surrogate models that estimate n-Hexane tank-overfill hazard zones in seconds instead of running ALOHA for every scenario.</p><ul><li>Full-factorial simulation dataset across six weather and spill parameters.</li><li>Compared regression, random forest, and neural networks for LEL-based zone radii.</li><li>Shipped as a Flask + Leaflet web app with map view, batch input, and export.</li></ul>'
+  title: 'Hazard Zone Prediction for Fuel Vapour Dispersion',
+  role: 'Undergraduate thesis · 2025 – 2026',
+  description: '<p>ALOHA has to be run scenario by scenario, which is too slow in an emergency. This thesis turns those simulations into instant hazard-zone estimates for n-Hexane tank overfill.</p><ul><li>1,215 ALOHA scenarios from a full-factorial design across six atmospheric and operational variables.</li><li>Surrogate models predict Red, Orange, and Yellow zone radii at once. Red Zone error fell to 1.82 m vs 22.25 m for the linear baseline, a twelvefold improvement on 243 test scenarios.</li><li>A robustness study maps where the model stops being valid: inputs outside the training space must be re-verified in ALOHA before informing any evacuation decision.</li><li>Delivered as a Flask + Leaflet web app with map view, batch input, and export.</li></ul><p>Supervisors: Adhitya Ryan Ramadhani, S.T., M.Sc., Ph.D. and Waskito Pranowo, M.T. Preprint: <a href="https://doi.org/10.2139/ssrn.7455051" target="_blank" rel="noopener noreferrer">SSRN, under review ↗</a></p>'
 });
-projects['energy-transition-indonesia'].role = 'First author · SUSTINERE, 2026';
+Object.assign(projects['hero-helmets'], {
+  title: 'HERO Helmets: Bio-Composite Safety Helmet for Mining',
+  role: 'Team leader · funded by Kemdikbudristek (PKM-KC) · 2025',
+  description: '<p>Safety helmet prototype for the mining industry, made from water hyacinth fibre bio-composite treated with NaOH.</p><ul><li>Led the team from funding proposal through design, fabrication, and testing.</li><li>Tensile and impact tests across fibre volume fractions of 0, 5, and 10 percent.</li><li>The revised treatment lifted the 5 percent specimen by 76.13 percent to 21.03 MPa, still below the 31.93 MPa unreinforced resin baseline, so the material was reported as promising rather than proven.</li></ul>'
+});
+Object.assign(projects['autonomous-trash-bin'], {
+  title: 'Autonomous Trash Bin',
+  role: 'Project manager, three-person team · Mechanical Engineering capstone · Mar – Jul 2025',
+  description: '<p>Line-follower waste collection robot.</p><ul><li>Owned coordination, schedule, and the frame and structure design. Structural analysis of the aluminium frame gave a maximum design load of 173.1 kg at a peak bending moment of 46.3 Nm.</li><li>Safety by design: the drive is interlocked on two independent measurements, ultrasonic fill height and load-cell weight, which must both agree before it moves, so one failed sensor cannot start it.</li><li>Halts on an obstructed path until the path clears.</li></ul>',
+  images: pimg('autonomous-trash-bin', ['1.jpg', '2.jpg', 'video.mp4'])
+});
+Object.assign(projects['mwt-rekap-bot'], {
+  title: 'MWT Inspection Reporting Bot',
+  role: 'AI field safety walkthrough reporting · MVP · 2025',
+  description: '<p>AI bot designed for Management Walkthrough (MWT) reporting in Pertamina field operations. Findings sent as free text, photos, or voice notes become a structured follow-up record.</p><ul><li>Extracts inspector, finding, recommendation, PIC, target date, and status.</li><li>Asks up to three clarifying questions when information is missing.</li><li>Archives photo evidence to Drive, removing manual transcription.</li></ul>',
+  images: pimg('mwt-rekap-bot', ['telegram-report.png', 'flowchart.jpg', 'telegram-report-2.png', 'sheet-rekap.png', 'sheet-rekap-2.png'])
+});
+projects['energy-transition-indonesia'].role = 'First author · Sustinere 10(2), 160–175, 2026 · Scopus, SINTA 2';
 projects['energy-transition-indonesia'].link = { href: 'https://doi.org/10.22515/8h4rm359', label: 'Read the published article ↗' };
+projects['heart-vs-slim'].role = 'First author · Motivection 7(1), 61–74, 2025';
 projects['heart-vs-slim'].images = pimg('heart-vs-slim', ['2.png', '3.png', '4.png', '1.jpg']);
-projects['mwt-rekap-bot'].images = pimg('mwt-rekap-bot', ['telegram-report.png', 'flowchart.jpg', 'telegram-report-2.png', 'sheet-rekap.png', 'sheet-rekap-2.png']);
-projects['autonomous-trash-bin'].images = pimg('autonomous-trash-bin', ['1.jpg', '2.jpg', 'video.mp4']);
+projects['perovskite-halide'].role = 'Co-author · Universitas Pertamina Press, 2026';
 projects['finflow-ai'] = {
   title: 'FinFlow AI',
   role: 'Personal project',
@@ -26,21 +44,21 @@ projects['finflow-ai'] = {
 };
 
 const featured = {
-  'n-hexane-hazard-zone': ['Thesis · Process safety + ML', 'Predicting hazard zones from tank-overfill scenarios, served as an interactive map app.'],
-  'analisis-aja': ['AI product', 'Root-cause analysis, summaries, and document drafts in one tool.'],
-  'mwt-rekap-bot': ['Client project · Pertamina', 'Telegram bot that turns field inspection reports into a Google Sheet.'],
-  'energy-transition-indonesia': ['Published research', "Can Indonesia hit its renewable targets? Forecasting + Monte Carlo."],
-  'heart-vs-slim': ['Published research', 'Two human-reliability methods compared on the Boeing 737 MAX case.']
+  'n-hexane-hazard-zone': ['Thesis · 2025 – 2026', 'Turning slow ALOHA simulations into instant hazard-zone estimates for emergency response, with clear limits on where the model is valid.'],
+  'hero-helmets': ['Team leader · PKM-KC funded', 'Water hyacinth bio-composite safety helmet for mining, from proposal to tensile and impact testing.'],
+  'autonomous-trash-bin': ['Capstone · Project manager', 'Waste collection robot whose drive is interlocked on two independent sensors.'],
+  'mwt-rekap-bot': ['AI tool · MVP', 'Turns field safety walkthrough findings from text, photos, or voice into structured records.'],
+  'analisis-aja': ['HSSE platform · Closed beta', 'Root cause analysis reports (5 Why, Fishbone, RCA) from HSSE documents.']
 };
 const more = {
-  'prompt-aja': 'AI image & video SaaS',
+  'energy-transition-indonesia': 'Published research · Sustinere',
+  'heart-vs-slim': 'Published research · Motivection',
+  'perovskite-halide': 'Feasibility study · co-author',
   'cnc-failure-identification': 'ML for machine failure',
   'excel-engineering-templates': 'Explosion & fire calculators',
-  'perovskite-halide': 'Fluorescent taggant study',
-  'hero-helmets': 'Bio-composite safety helmet',
   'hvac-design': 'HVAC design & LCA',
-  'autonomous-trash-bin': 'Line-following robot',
   'electric-oven': 'Low-cost oven prototype',
+  'prompt-aja': 'AI image & video SaaS',
   'finflow-ai': 'Personal finance app'
 };
 const cover = p => asset(p.images.find(x => !x.endsWith('.mp4')));
