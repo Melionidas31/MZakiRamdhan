@@ -14,7 +14,7 @@ Object.assign(projects['n-hexane-hazard-zone'], {
   description: '<p>Machine-learning surrogate models that estimate n-Hexane tank-overfill hazard zones in seconds instead of running ALOHA for every scenario.</p><ul><li>Full-factorial simulation dataset across six weather and spill parameters.</li><li>Compared regression, random forest, and neural networks for LEL-based zone radii.</li><li>Shipped as a Flask + Leaflet web app with map view, batch input, and export.</li></ul>'
 });
 projects['energy-transition-indonesia'].role = 'First author · SUSTINERE, 2026';
-projects['energy-transition-indonesia'].link = { href: 'https://sustinerejes.com/index.php/a/article/view/634', label: 'Read the published article ↗' };
+projects['energy-transition-indonesia'].link = { href: 'https://doi.org/10.22515/8h4rm359', label: 'Read the published article ↗' };
 projects['heart-vs-slim'].images = pimg('heart-vs-slim', ['2.png', '3.png', '4.png', '1.jpg']);
 projects['mwt-rekap-bot'].images = pimg('mwt-rekap-bot', ['telegram-report.png', 'flowchart.jpg', 'telegram-report-2.png', 'sheet-rekap.png', 'sheet-rekap-2.png']);
 projects['autonomous-trash-bin'].images = pimg('autonomous-trash-bin', ['1.jpg', '2.jpg', 'video.mp4']);

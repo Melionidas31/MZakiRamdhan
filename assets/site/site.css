@@ -151,7 +151,7 @@ p { margin: 0; }
 .plain { list-style: none; margin: 0; padding: 0; }
 .plain li { padding: 14px 0; border-top: 1px solid var(--line); }
 .plain li:last-child { border-bottom: 1px solid var(--line); }
-.plain a { font-weight: 600; text-decoration-color: var(--line); text-underline-offset: 4px; }
+.plain a, .plain strong { font-weight: 600; text-decoration-color: var(--line); text-underline-offset: 4px; }
 .plain a:hover { text-decoration-color: currentColor; }
 .plain span { display: block; color: var(--muted); font-size: 16px; margin-top: 2px; }
 
