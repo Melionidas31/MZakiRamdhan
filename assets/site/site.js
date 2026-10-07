@@ -27,8 +27,8 @@ Object.assign(projects['autonomous-trash-bin'], {
 });
 Object.assign(projects['mwt-rekap-bot'], {
   title: 'MWT Inspection Reporting Bot',
-  role: 'AI field safety walkthrough reporting · MVP · 2025',
-  description: '<p>AI bot designed for Management Walkthrough (MWT) reporting in Pertamina field operations. Findings sent as free text, photos, or voice notes become a structured follow-up record.</p><ul><li>Extracts inspector, finding, recommendation, PIC, target date, and status.</li><li>Asks up to three clarifying questions when information is missing.</li><li>Archives photo evidence to Drive, removing manual transcription.</li></ul>',
+  role: 'AI field safety walkthrough reporting · in use · 2025 – present',
+  description: '<p>AI bot for Management Walkthrough (MWT) reporting, in use in Pertamina field operations. Findings sent as free text, photos, or voice notes become a structured follow-up record.</p><ul><li>Extracts inspector, finding, recommendation, PIC, target date, and status.</li><li>Asks up to three clarifying questions when information is missing.</li><li>Archives photo evidence to Drive, removing manual transcription.</li></ul>',
   images: pimg('mwt-rekap-bot', ['telegram-report.png', 'flowchart.jpg', 'telegram-report-2.png', 'sheet-rekap.png', 'sheet-rekap-2.png'])
 });
 projects['energy-transition-indonesia'].role = 'First author · Sustinere 10(2), 160–175, 2026 · Scopus, SINTA 2';
@@ -47,7 +47,7 @@ const featured = {
   'n-hexane-hazard-zone': ['Thesis · 2025 – 2026', 'Turning slow ALOHA simulations into instant hazard-zone estimates for emergency response, with clear limits on where the model is valid.'],
   'hero-helmets': ['Team leader · PKM-KC funded', 'Water hyacinth bio-composite safety helmet for mining, from proposal to tensile and impact testing.'],
   'autonomous-trash-bin': ['Capstone · Project manager', 'Waste collection robot whose drive is interlocked on two independent sensors.'],
-  'mwt-rekap-bot': ['AI tool · MVP', 'Turns field safety walkthrough findings from text, photos, or voice into structured records.'],
+  'mwt-rekap-bot': ['AI tool · In use at Pertamina', 'Turns field safety walkthrough findings from text, photos, or voice into structured records.'],
   'analisis-aja': ['HSSE platform · Closed beta', 'Root cause analysis reports (5 Why, Fishbone, RCA) from HSSE documents.']
 };
 const more = {
