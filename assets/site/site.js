@@ -5,14 +5,16 @@ const pimg = (folder, names) => names.map(name => `assets/images/projects/${fold
 // Current overrides on top of the authored records in project-data.js, aligned with the CV.
 Object.assign(projects['analisis-aja'], {
   title: 'AntiDeadline.ai',
-  role: 'HSSE root cause analysis platform · closed beta · 2025 – present',
-  description: '<p>Turns HSSE and K3 documents into root cause analysis reports (5 Why, Fishbone, full RCA) that separate verified facts from assumptions, as drafts for authorised personnel to validate.</p><ul><li>Also summarizes documents and helps draft reports.</li><li>Built with Next.js, TypeScript, and LLM APIs, with auth, history, and credits.</li></ul>',
+  role: 'AI task & HSSE analysis platform · closed beta · 2025 – present',
+  description: '<p>Turns raw documents (PDF, DOCX, XLSX) into auditable root cause analysis reports (5 Why, Fishbone, full RCA), summaries, and structured drafts, separating verified facts from AI assumptions.</p><ul><li>Three-stage multi-model pipeline with end-to-end Zod schema validation, JSON-repair retry, and atomic credit transactions.</li><li>Built with Next.js 16, React 19, TypeScript, Supabase (RLS), Drizzle ORM, and Vercel.</li></ul>',
+  link: { href: 'https://antideadline.vercel.app', label: 'Visit AntiDeadline.ai ↗' },
   images: pimg('antideadline-ai', ['01-landing.png', '03-dashboard.png', '04-analysis-input.png', '05-analysis-category.png', '06-analysis-methods.png', '07-summary-result.png'])
 });
 Object.assign(projects['n-hexane-hazard-zone'], {
   title: 'Hazard Zone Prediction for Fuel Vapour Dispersion',
-  role: 'Undergraduate thesis · 2025 – 2026',
-  description: '<p>ALOHA has to be run scenario by scenario, which is too slow in an emergency. This thesis turns those simulations into instant hazard-zone estimates for n-Hexane tank overfill.</p><ul><li>1,215 ALOHA scenarios from a full-factorial design across six atmospheric and operational variables.</li><li>Surrogate models predict Red, Orange, and Yellow zone radii at once. Red Zone error fell to 1.82 m vs 22.25 m for the linear baseline, a twelvefold improvement on 243 test scenarios.</li><li>A robustness study maps where the model stops being valid: inputs outside the training space must be re-verified in ALOHA before informing any evacuation decision.</li><li>Delivered as a Flask + Leaflet web app with map view, batch input, and export.</li></ul><p>Supervisors: Adhitya Ryan Ramadhani, S.T., M.Sc., Ph.D. and Waskito Pranowo, M.T. Preprint: <a href="https://doi.org/10.2139/ssrn.7455051" target="_blank" rel="noopener noreferrer">SSRN, under review ↗</a></p>'
+  role: 'Undergraduate thesis · Published in JLPPI (Scopus Q1) · 2025 – 2026',
+  description: '<p>ALOHA has to be run scenario by scenario, which is too slow in an emergency. This thesis turns those simulations into instant hazard-zone estimates for n-Hexane tank overfill.</p><ul><li>1,215 ALOHA scenarios from a full-factorial design across six atmospheric and operational variables.</li><li>Surrogate models predict Red, Orange, and Yellow zone radii at once. Red Zone error fell to 1.82 m vs 22.25 m for the linear baseline, a twelvefold improvement on 243 test scenarios.</li><li>A robustness study maps where the model stops being valid: inputs outside the training space must be re-verified in ALOHA before informing any evacuation decision.</li><li>Delivered as a Flask + Leaflet web app with map view, batch input, and export.</li></ul><p>Supervisors: Adhitya Ryan Ramadhani, S.T., M.Sc., Ph.D. and Waskito Pranowo, M.T. Published: <a href="https://doi.org/10.1016/j.jlp.2026.106245" target="_blank" rel="noopener noreferrer">J. Loss Prevention in the Process Industries, vol. 105, 106245 (Nov 2026) ↗</a></p>',
+  link: { href: 'https://doi.org/10.1016/j.jlp.2026.106245', label: 'Read the published article ↗' }
 });
 Object.assign(projects['hero-helmets'], {
   title: 'HERO Helmets: Bio-Composite Safety Helmet for Mining',
@@ -27,8 +29,8 @@ Object.assign(projects['autonomous-trash-bin'], {
 });
 Object.assign(projects['mwt-rekap-bot'], {
   title: 'MWT Inspection Reporting Bot',
-  role: 'AI field safety walkthrough reporting · in use · 2025 – present',
-  description: '<p>AI bot for Management Walkthrough (MWT) reporting, in use in Pertamina field operations. Findings sent as free text, photos, or voice notes become a structured follow-up record.</p><ul><li>Extracts inspector, finding, recommendation, PIC, target date, and status.</li><li>Asks up to three clarifying questions when information is missing.</li><li>Archives photo evidence to Drive, removing manual transcription.</li></ul>',
+  role: 'AI field safety walkthrough reporting · PT Pertamina Lubricants (PUG) · 2026 – present',
+  description: '<p>AI bot for 5R and Management Walkthrough (MWT) reporting, in active use at PT Pertamina Lubricants Production Unit Gresik since June 2026. Findings sent as free text, photos, or voice notes become a structured follow-up record.</p><ul><li>Processed 763 findings (Jun–Sep 2026) with 88% closed; in the plant\'s improvement project review, average close time dropped from 7.5 to 3.7 days (−51%) and user satisfaction scored 4.6/5.</li><li>Asks up to three clarifying questions when information is missing and archives photo evidence to Google Drive.</li></ul>',
   images: pimg('mwt-rekap-bot', ['telegram-report.png', 'flowchart.jpg', 'telegram-report-2.png', 'sheet-rekap.png', 'sheet-rekap-2.png'])
 });
 projects['energy-transition-indonesia'].role = 'First author · Sustinere 10(2), 160–175, 2026 · Scopus, SINTA 2';
@@ -42,6 +44,18 @@ projects['finflow-ai'] = {
   description: '<p>A personal finance dashboard with budgets, transaction search, and an automation hub. Screenshots use demo data.</p>',
   images: pimg('finflow-ai', ['01-dashboard-demo.png', '02-automation-hub.png', '03-budgets-demo.png', '05-transactions-demo.png'])
 };
+projects['water-meter-monitoring'] = {
+  title: 'Water Meter Monitoring System',
+  role: 'Production system · PT Pertamina Lubricants (PUG) · Aug 2026 – present',
+  description: '<p>Sole developer of an automated daily monitoring and anomaly alert pipeline across 27 plant flowmeters (F0–F26), running on an Ubuntu VPS since August 2026.</p><ul><li>67 days unattended uptime: 310 per-PIC digest emails sent via Gmail REST API (OAuth2) with 0 failures and 1,317 entries processed.</li><li>Replaced unreliable AI vision meter reading (&lt;50% accuracy in field benchmark) with 9 deterministic validation rules (R1–R9), cutting false anomaly alerts by 55% (11 to 5 per week).</li><li>Backed by SQLite state tracking and 293 passing pytest checks.</li></ul>',
+  images: pimg('water-meter-monitoring', ['overview.svg'])
+};
+projects['predictive-maintenance'] = {
+  title: 'Industrial Predictive Maintenance Dashboard',
+  role: 'ML & Reliability Engineering · FastAPI, React, XGBoost',
+  description: '<p>End-to-end predictive maintenance platform built on 876,000+ sensor data points from 100 industrial machines over one year.</p><ul><li>Combines three models: XGBoost failure prediction, Isolation Forest anomaly detection, and Remaining Useful Life (RUL) estimation.</li><li>Computes composite machine health scores and proactive vs reactive cost-benefit analysis.</li></ul>',
+  images: pimg('predictive-maintenance', ['machine_health.webp', 'failure_analysis.webp', 'correlation_heatmap.webp'])
+};
 
 const featured = {
   'n-hexane-hazard-zone': ['Thesis · 2025 – 2026', 'Turning slow ALOHA simulations into instant hazard-zone estimates for emergency response, with clear limits on where the model is valid.'],
@@ -51,6 +65,8 @@ const featured = {
   'analisis-aja': ['HSSE platform · Closed beta', 'Root cause analysis reports (5 Why, Fishbone, RCA) from HSSE documents.']
 };
 const more = {
+  'water-meter-monitoring': 'Production · Pertamina Lubricants',
+  'predictive-maintenance': 'XGBoost & RUL · 876k+ rows',
   'energy-transition-indonesia': 'Published research · Sustinere',
   'heart-vs-slim': 'Published research · Motivection',
   'perovskite-halide': 'Feasibility study · co-author',
