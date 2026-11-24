@@ -74,7 +74,6 @@ const more = {
   'excel-engineering-templates': 'Explosion & fire calculators',
   'hvac-design': 'HVAC design & LCA',
   'electric-oven': 'Low-cost oven prototype',
-  'prompt-aja': 'AI image & video SaaS',
   'finflow-ai': 'Personal finance app'
 };
 const cover = p => asset(p.images.find(x => !x.endsWith('.mp4')));
